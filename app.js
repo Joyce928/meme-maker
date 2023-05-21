@@ -20,7 +20,7 @@ canvas.height = CANVAS_HEIGHT;
 ctx.lineWidth = lineWidth.value;
 ctx.lineCap = "round";
 let isPaining = false;
-let isFilling = true;
+let isFilling = false;
 
 function onMove(event) {
   if (isPaining) {
@@ -81,7 +81,7 @@ function onDestroyClick() {
 function onEraserClick() {
   ctx.strokeStyle = "white";
   isFilling = false;
-  modeBtn.innerText = "Fill";
+  modeBtn.innerText = "Draw";
 }
 
 function onFileChange(event) {
@@ -100,7 +100,7 @@ function onDoubleClick(event) {
   if (text !== "") {
     ctx.save();
     ctx.lineWidth = 1;
-    ctx.font = "68px 'Press Start 2P'";
+    ctx.font = "30px serif";
     ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();
   }
