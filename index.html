@@ -8,15 +8,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <input id="line-width" step="0.1" type="range" min="1" max="10" value="5" />
-    <div>
+    <div class="color-options">
       <input id="color" type="color" />
-      <div
-        class="color-option"
-        style="background-color: #55efc4"
-        data-color="#55efc4"
-      ></div>
       <div
         class="color-option"
         style="background-color: #81ecec"
@@ -34,16 +27,6 @@
       ></div>
       <div
         class="color-option"
-        style="background-color: #dfe6e9"
-        data-color="#dfe6e9"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #00b894"
-        data-color="#00b894"
-      ></div>
-      <div
-        class="color-option"
         style="background-color: #00cec9"
         data-color="#00cec9"
       ></div>
@@ -54,23 +37,8 @@
       ></div>
       <div
         class="color-option"
-        style="background-color: #6c5ce7"
-        data-color="#6c5ce7"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #b2bec3"
-        data-color="#b2bec3"
-      ></div>
-      <div
-        class="color-option"
         style="background-color: #ffeaa7"
         data-color="#ffeaa7"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #fab1a0"
-        data-color="#fab1a0"
       ></div>
       <div
         class="color-option"
@@ -84,18 +52,8 @@
       ></div>
       <div
         class="color-option"
-        style="background-color: #636e72"
-        data-color="#636e72"
-      ></div>
-      <div
-        class="color-option"
         style="background-color: #fdcb6e"
         data-color="#fdcb6e"
-      ></div>
-      <div
-        class="color-option"
-        style="background-color: #e17055"
-        data-color="#e17055"
       ></div>
       <div
         class="color-option"
@@ -113,11 +71,31 @@
         data-color="#2d3436"
       ></div>
     </div>
-    <button id="mode-btn">Draw</button>
-    <button id="destroy-btn">Destroy</button>
-    <button id="eraser-btn">Erase</button>
-    <input type="file" accept="image/*" id="file" />
-    <input type="text" placeholder="Write and then double click" id="text" />
+    <canvas></canvas>
+    <div class="btns">
+      <input
+        id="line-width"
+        step="0.1"
+        type="range"
+        min="1"
+        max="10"
+        value="5"
+      />
+      <button id="mode-btn">Draw</button>
+      <button id="destroy-btn">💣Destroy</button>
+      <button id="eraser-btn">❌Erase</button>
+      <label for="file">
+        Add Photo
+        <input type="file" accept="image/*" id="file" />
+      </label>
+      <input type="text" placeholder="Write here & dbclick" id="text" />
+      <button id="save">Save image</button>
+    </div>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
